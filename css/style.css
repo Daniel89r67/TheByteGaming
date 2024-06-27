@@ -1,0 +1,99 @@
+/*Reseteo del código para unificar los espacios en todos los navegadores*/
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/*HEADER*/
+header {
+    background-color: black;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    font-family: "Comfortaa", sans-serif;
+}
+
+/*AJUSTE DEL LOGO*/
+header img {
+    border-radius: 40%;
+    padding: 20px;
+    float: left;
+}
+
+header nav ul {
+    list-style-type: none;
+
+}
+
+/*BODY*/
+body {
+    background-color: rgb(241, 241, 241);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+a {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+    border: white 2px solid;
+    margin: 10px;
+
+}
+
+li {
+    margin: 20px;
+    display: inline-block;
+    font-family: "Comfortaa", sans-serif;
+    font-size: medium;
+
+}
+
+.Busqueda div {
+    display: inline-block;
+}
+
+/*FOOTER*/
+footer {
+    background-color: rgb(65, 65, 65);
+    font-family: "Comfortaa", sans-serif;
+
+}
+
+.contactanos h3,
+h4 {
+    color: white;
+}
+
+.redes {
+    text-align: center;
+}
+
+.redes h4 {
+    color: white;
+}
+
+.texto {
+    color: beige;
+}
+
+.footer1 {
+    background-image: url(../img/footer.jpg);
+}
+
+.login h3 {
+    text-align: right;
+}
+
+.texto p {
+    color: white;
+}
+
+.footer1 img {
+    border-radius: 70%;
+    font-size: small;
+
+}
