@@ -65,9 +65,11 @@ footer {
 
 .contactanos h3,
 h4 {
-    color: white;
+    color: rgb(3, 0, 0);
 }
-
+.ArmatuPC{
+    color: black;
+}
 .redes {
     text-align: center;
 }
