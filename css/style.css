@@ -30,13 +30,6 @@
 
 }
 
-.botonMenu {
-    background-color: black;
-    color: black;
-    border-radius: 10px;
-    border-bottom: 10px;
-}
-
 h1 {
     color: white;
     font-family: "Comfortaa", sans-serif;
@@ -222,7 +215,7 @@ h4 {
             "aside"
             "main"
             "footer";
-            background-color: black;
+        background-color: black;
     }
 
     .aside div {
@@ -233,5 +226,9 @@ h4 {
         color: white;
         background-color: black;
     }
-   
+
+    .texto {
+        display: none;
+    }
+
 }
