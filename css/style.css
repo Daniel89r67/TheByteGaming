@@ -22,11 +22,13 @@ header {
     text-align: center;
     background-color: black;
     color: azure;
+   
 }
 .imagenes-destacadas {
-    display: flex;
-    margin: 10px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
 }
 .destacados img {
     display: flex;
@@ -34,6 +36,8 @@ header {
     margin: 10px;
     border: double grey 2px;
     opacity: .4;
+    max-width: 100%;
+    height: auto;
 }
 .destacados img:hover {
     opacity: 1;
