@@ -4,50 +4,57 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 /*Body*/
 
 .body {
-    
+
     width: 100vw;
     height: 100vh;
     display: grid;
     grid-template-rows: 0.2fr 0.2fr 4fr 0.4fr;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2px;
-    grid-template-areas: 
-    "header header header"
-    "aside aside aside"
-    "main main main"
-    "footer footer footer";
+    grid-template-areas:
+        "header header header"
+        "aside aside aside"
+        "main main main"
+        "footer footer footer";
 }
+
 /*Header*/
 
 .header {
     background-color: black;
     grid-area: header;
-   
+
 }
+
 .botonMenu {
     background-color: black;
-    color:black;
+    color: black;
     border-radius: 10px;
     border-bottom: 10px;
 }
+
 h1 {
     color: white;
     font-family: "Comfortaa", sans-serif;
 }
+
 .titulo {
     text-align: center;
     color: aliceblue;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
 header img {
     border-radius: 40%;
     padding: 20px;
     float: left;
 }
-header nav{
+
+header nav {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -57,11 +64,13 @@ header nav ul {
     list-style-type: none;
 
 }
-li:hover{
-    background-color:rgb(3, 61, 99);
+
+li:hover {
+    background-color: rgb(3, 61, 99);
     color: black;
     border-radius: 20px;
 }
+
 a {
     color: white;
     font-size: 2rem;
@@ -71,6 +80,7 @@ a {
     margin: 10px;
 
 }
+
 li {
     margin: 15px;
     display: inline-block;
@@ -78,16 +88,19 @@ li {
     font-size: medium;
 
 }
+
 /*Aside*/
 
 .aside {
     background-color: rgb(2, 1, 1);
     grid-area: aside;
 }
-.Busqueda h2{
+
+.Busqueda h2 {
     margin: 10px;
     color: grey;
 }
+
 .Busqueda {
     display: inline-block;
     display: flex;
@@ -96,6 +109,7 @@ li {
     align-items: center;
     padding: 20px;
 }
+
 .Login {
     display: inline-block;
     display: flex;
@@ -104,6 +118,7 @@ li {
     align-items: right;
     padding: 20px;
 }
+
 .Formulario {
     display: flex;
     justify-content: right;
@@ -114,7 +129,7 @@ li {
 
 /*Main*/
 .main {
-    background-color:aliceblue;
+    background-color: aliceblue;
     grid-area: main;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -122,14 +137,16 @@ li {
 .imagenes-destacadas {
     display: flex;
     flex-wrap: wrap;
-   
+
 }
+
 .destacados {
     align-content: center;
     justify-content: center;
     text-align: center;
     color: rgb(0, 0, 0);
 }
+
 .destacados img {
     display: flex;
     justify-content: space-around;
@@ -139,6 +156,7 @@ li {
     max-width: 100%;
     height: auto;
 }
+
 .destacados img:hover {
     opacity: 1;
     border: solid white 2px;
@@ -155,6 +173,7 @@ li {
     font-family: "Comfortaa", sans-serif;
     background-image: url(../img/footer.jpg);
 }
+
 .contactanos h3,
 h4 {
     color: rgb(255, 255, 255);
@@ -171,9 +190,11 @@ h4 {
 .redes h4 {
     color: white;
 }
+
 .redes img {
     border-radius: 20px;
 }
+
 .texto {
     color: beige;
 }
@@ -189,24 +210,28 @@ h4 {
 .texto p {
     color: white;
 }
+
 /*media quaries*/
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 600px) {
     .body {
         display: grid;
         grid-template-rows: 0.2fr 0.2fr 4fr 0.4fr;
         grid-template-columns: 1fr;
-        grid-template-areas: 
-        "header"
-        "aside"
-        "main"
-        "footer";
+        grid-template-areas:
+            "header"
+            "aside"
+            "main"
+            "footer";
+            background-color: black;
     }
+
     .aside div {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1 fr 1fr ;
-        background-color:rgb(22, 22, 22);
-    
+        display: none;
     }
+
+    .destacados {
+        color: white;
+        background-color: black;
     }
-    
+   
+}
