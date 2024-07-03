@@ -5,21 +5,20 @@
     box-sizing: border-box;
 }
 /*Body*/
-@media only screen and (max-width: 600px) {
+
 .body {
     
     width: 100vw;
     height: 100vh;
     display: grid;
     grid-template-rows: 0.2fr 0.2fr 4fr 0.4fr;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 2px;
     grid-template-areas: 
-    "header"
-    "aside"
-    "main"
-    "footer";
-}
+    "header header header"
+    "aside aside aside"
+    "main main main"
+    "footer footer footer";
 }
 /*Header*/
 
@@ -27,6 +26,12 @@
     background-color: black;
     grid-area: header;
    
+}
+.botonMenu {
+    background-color: black;
+    color:black;
+    border-radius: 10px;
+    border-bottom: 10px;
 }
 h1 {
     color: white;
@@ -184,7 +189,24 @@ h4 {
 .texto p {
     color: white;
 }
-
-
-
-
+/*media quaries*/
+@media only screen and (max-width: 480px) {
+    .body {
+        display: grid;
+        grid-template-rows: 0.2fr 0.2fr 4fr 0.4fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "header"
+        "aside"
+        "main"
+        "footer";
+    }
+    .aside div {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1 fr 1fr ;
+        background-color:rgb(22, 22, 22);
+    
+    }
+    }
+    
