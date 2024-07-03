@@ -23,9 +23,13 @@ header {
     background-color: black;
     color: azure;
 }
+.imagenes-destacadas {
+    display: flex;
+    margin: 10px;
+    flex-wrap: wrap;
+}
 .destacados img {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
     margin: 10px;
     border: double grey 2px;
@@ -36,12 +40,7 @@ header {
     border: solid white 2px;
     border-radius: 10px;
 }
-.imagenes-destacadas {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 10px;
-}
+
 h1 {
     color: white;
     font-family: "Comfortaa", sans-serif;
@@ -94,6 +93,7 @@ li {
 }
 .Busqueda h2{
     margin: 10px;
+    color: grey;
 }
 .Busqueda {
     display: inline-block;
@@ -141,7 +141,9 @@ h4 {
 .redes h4 {
     color: white;
 }
-
+.redes img {
+    border-radius: 20px;
+}
 .texto {
     color: beige;
 }
