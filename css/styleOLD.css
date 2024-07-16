@@ -42,82 +42,50 @@ header img {
     float: left;
 }
 
-header nav {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    background-color: black;
-    
-}
-
-header nav ul {
-    list-style-type: none;
-
-}
-
  li:hover {
     background-color: rgb(3, 61, 99);
-    color: black;
+    color:white;
     border-radius: 20px;
 }
 
-a {
+header nav {
     color: white;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     text-decoration: none;
     padding: 10px;
     margin: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    background-color: black;
 
 }
-
-.navbar navbar-expand-lg bg-body-tertiary li {
-    margin: 15px;
+.nav-item{
+    color: white;
+}
+.btn {
+    color: white;
+    background-color: rgb(0, 0, 0);
     display: inline-block;
-    font-family: "Comfortaa", sans-serif;
-    font-size: medium;
-
+    text-align: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 10px;
+    
 }
-.btn btn-outline-success {
-    color: blue;
+.btn:hover{
+    background-color: rgb(4, 68, 189);
+    color: rgb(233, 233, 233);
+
 }
 
 /*Aside*/
 
 .aside {
-    background-color: rgb(2, 1, 1);
-    grid-area: aside;
+    
 }
 
-.Busqueda h2 {
-    margin: 10px;
-    color: grey;
-}
-
-.Busqueda {
-    display: inline-block;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-
-.Login {
-    display: inline-block;
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-    align-items: right;
-    padding: 20px;
-}
-
-.Formulario {
-    display: flex;
-    justify-content: right;
-    align-items: right;
-    padding: 10px;
-}
 
 
 /*Main*/
