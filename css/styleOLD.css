@@ -1,0 +1,234 @@
+/*Reseteo del código para unificar los espacios en todos los navegadores*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*Body*/
+
+.body {
+
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 0.2fr 0.2fr 4fr 0.4fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2px;
+    grid-template-areas:
+        "header header header"
+        "aside aside aside"
+        "main main main"
+        "footer footer footer";
+}
+
+/*Header*/
+
+.header {
+    background-color: black;
+    grid-area: header;
+
+}
+
+
+h1 {
+    color: white;
+    font-family: "Comfortaa", sans-serif;
+}
+
+header img {
+    border-radius: 40%;
+    padding: 20px;
+    float: left;
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    background-color: black;
+    
+}
+
+header nav ul {
+    list-style-type: none;
+
+}
+
+ li:hover {
+    background-color: rgb(3, 61, 99);
+    color: black;
+    border-radius: 20px;
+}
+
+a {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px;
+
+}
+
+.navbar navbar-expand-lg bg-body-tertiary li {
+    margin: 15px;
+    display: inline-block;
+    font-family: "Comfortaa", sans-serif;
+    font-size: medium;
+
+}
+.btn btn-outline-success {
+    color: blue;
+}
+
+/*Aside*/
+
+.aside {
+    background-color: rgb(2, 1, 1);
+    grid-area: aside;
+}
+
+.Busqueda h2 {
+    margin: 10px;
+    color: grey;
+}
+
+.Busqueda {
+    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.Login {
+    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: right;
+    padding: 20px;
+}
+
+.Formulario {
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    padding: 10px;
+}
+
+
+/*Main*/
+.main {
+    background-color: aliceblue;
+    grid-area: main;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.imagenes-destacadas {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.destacados {
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.destacados img {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+    border: double grey 2px;
+    opacity: .4;
+    max-width: 100%;
+    height: auto;
+}
+
+.destacados img:hover {
+    opacity: 1;
+    border: solid white 2px;
+    border-radius: 10px;
+}
+
+
+
+/*Footer*/
+
+.footer {
+    background-color: rgb(5, 4, 4);
+    grid-area: footer;
+    font-family: "Comfortaa", sans-serif;
+    background-image: url(../img/footer.jpg);
+}
+
+.contactanos h3,
+h4 {
+    color: rgb(255, 255, 255);
+}
+
+.ArmatuPC {
+    color: black;
+}
+
+.redes {
+    text-align: center;
+}
+
+.redes h4 {
+    color: white;
+}
+
+.redes img {
+    border-radius: 20px;
+}
+
+.texto {
+    color: beige;
+}
+
+.footer {
+    background-color: rgb(23, 26, 31);
+}
+
+.login h3 {
+    text-align: right;
+}
+
+.texto p {
+    color: white;
+}
+
+/*media quaries*/
+@media only screen and (max-width: 600px) {
+    .body {
+        display: grid;
+        grid-template-rows: 0.2fr 0.2fr 4fr 0.4fr;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "aside"
+            "main"
+            "footer";
+        background-color: black;
+    }
+
+    .aside div {
+        display: none;
+    }
+
+    .destacados {
+        color: white;
+        background-color: black;
+    }
+
+    .texto {
+        display: none;
+    }
+
+}
