@@ -1,5 +1,7 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-}
+@import "body";
+@import "header";
+@import "aside";
+@import "main";
+@import "footer";
+@import "mediaq";
+

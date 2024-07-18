@@ -1,44 +1,3 @@
-.footer {
-    
-}
-
-.contactanos h3,
-h4 {
-    color: rgb(255, 255, 255);
-}
-
-.ArmatuPC {
-    color: black;
-}
-
-.redes {
-    text-align: center;
-}
-
-.redes h4 {
-    color: white;
-}
-
-.redes img {
-    border-radius: 20px;
-}
-
-.texto {
-    color: beige;
-}
-
-.footer {
-    background-color: rgb(23, 26, 31);
-}
-
-.login h3 {
-    text-align: right;
-}
-
-.texto p {
-    color: white;
-}
-
 /*media quaries*/
 @media only screen and (max-width: 600px) {
     .body {
@@ -53,10 +12,6 @@ h4 {
         background-color: black;
     }
 
-    .aside div {
-        display: none;
-    }
-
     .destacados {
         color: white;
         background-color: black;
@@ -66,4 +21,15 @@ h4 {
         display: none;
     }
 
+}
+@media (max-width: 900px) {
+    .galeria-item {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    .galeria-item {
+        flex: 1 1 100%;
+    }
 }
