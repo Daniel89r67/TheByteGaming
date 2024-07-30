@@ -6,277 +6,274 @@
   box-sizing: border-box;
 }
 
-.body {
+.contenedor {
+  display: grid;
   width: 100vw;
   height: 100vh;
-  display: grid;
-  background-size: cover;
-  background-attachment: fixed;
-  grid-template-rows: 0.2fr 0.2fr 4fr 0.4fr;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 2px;
-  grid-template-areas: "header header header" "aside aside aside" "main main main" "footer footer footer";
+  grid-auto-columns: 1fr;
+  grid-template-columns: 0.4fr 1.6fr 1fr;
+  grid-template-rows: 0.4fr 0.4fr 2.8fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "header header header" "main main main" "main main main" "footer footer footer";
 }
 
-header {
-  background-color: black;
+.header {
   grid-area: header;
+  background: linear-gradient(hsl(209, 100%, 10%), rgb(1, 1, 82), black);
 }
-header img {
-  border-radius: 40%;
-  padding: 20px;
-  float: left;
-}
-header h1 a {
-  color: white;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+.header h1 a {
   text-decoration: none;
+  color: hwb(0 100% 0%);
 }
-header nav .navbar {
-  color: white;
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-decoration: none;
-  padding: 10px;
-  margin: 10px;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  background-color: black;
+.header nav {
+  background: linear-gradient(rgb(22, 19, 19), hsl(0, 2%, 25%), #1b1b1b);
 }
-header nav .navbar ul li .navbar-nav {
-  color: white;
-  background-color: black;
-  list-style: none;
+.header nav a img {
+  width: 75px;
+  transition: all 1.5s;
+  border-radius: 25px;
 }
-header nav .navbar ul li:hover {
-  background-color: rgb(3, 61, 99);
-  color: white;
-  border-radius: 20px;
+.header nav a img:hover {
+  transform: scale(1.3s);
+  transform: rotate(0.9turn);
 }
-header nav .navbar form .d-flex input {
-  color: white;
-  background-color: rgb(0, 0, 0);
-  display: inline-block;
-  text-align: center;
-  flex-wrap: wrap;
-  padding: 10px;
-  margin: 10px;
+.header nav .nav-item {
+  font-size: large;
+  font-family: "Courier New", Courier, monospace;
 }
-header nav .navbar form .d-flex:hover {
-  background-color: rgb(9, 78, 206);
-  color: rgb(233, 233, 233);
-  border-radius: 20px;
-}
-header nav .navbar form .d-flex .btn:hover {
-  background-color: rgb(4, 68, 189);
-  color: white;
+.header nav .nav-item:hover {
+  border-radius: 10px;
+  background-color: rgb(38, 94, 197);
+  text-decoration: white;
+  transform: scale(1.1, 1.1);
 }
 
 .main {
-  background-color: aliceblue;
   grid-area: main;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-}
-.main .galeria {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-  max-width: 1200px;
-  margin: 20px;
-}
-.main .galeria .galeria-item {
-  flex: 1 1 calc(33.333% - 20px);
-  box-sizing: border-box;
-  position: relative;
-  overflow: hidden;
-}
-.main .galeria .galeria-item .galeria-item img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-.main section .destacados {
-  align-content: center;
-  justify-content: center;
-  text-align: center;
-  color: rgb(0, 0, 0);
-}
-.main section .destacados:hover {
-  opacity: 1;
-  border: solid white 2px;
-  border-radius: 10px;
-}
-.main section .destacados h2 {
-  text-align: center;
+  font-family: "Courier New", Courier, monospace;
   background-color: black;
-}
-.main section .destacados p {
-  text-align: center;
-  background-color: black;
-}
-.main section .imagenes-destacadas {
+  margin: 0;
+  padding: 0;
   display: flex;
-  flex-wrap: wrap;
-}
-.main section .imagenes-destacadas img {
-  display: flex;
-  justify-content: space-around;
-  margin: 10px;
-  border: double grey 2px;
-  opacity: 0.4;
-  max-width: 100%;
-  height: auto;
-}
-.main section .imagenes-destacadas img:hover {
-  opacity: 1;
-  border: solid white 2px;
-  border-radius: 10px;
-}
-.main .gabinete {
-  display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+}
+
+.main1 {
+  grid-area: main;
+  font-family: "Courier New", Courier, monospace;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main2 {
+  grid-area: main;
+  font-family: "Courier New", Courier, monospace;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main2 .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
-  padding: 10px;
 }
-.main .gabinete .card {
-  background-color: #fff;
+.main2 .card {
+  background-color: hwb(0 100% 0%);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.2s;
-  width: 30px;
+  margin: 20px;
+  padding: 20px;
+  width: 300px;
   text-align: center;
+  transition: transform 0.2s;
 }
-.main .gabinete .card .card img {
-  width: 20%;
-  height: 10px;
-  object-fit: cover;
-}
-.main .gabinete .card .card h3 {
-  margin: 15px 0 10px;
-  font-size: 1.5em;
-}
-.main .gabinete .card .card p {
-  padding: 0 15px 15px;
-  font-size: 1em;
-  color: #666;
-}
-.main .gabinete .card:hover {
+.main2 .card:hover {
   transform: scale(1.05);
 }
-.main .carousel {
-  position: relative;
-  width: 80%;
-  max-width: 600px;
-  overflow: hidden;
+.main2 .card img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
-.main .carousel__slides {
+.main2 .card h3 {
+  margin: 15px 0;
+}
+.main2 .card p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.main2 .card .buttons {
   display: flex;
-  transition: transform 0.5s ease-in-out;
-  width: 300%;
+  justify-content: space-around;
 }
-.main .carousel__slides > div {
-  width: 100%;
-  flex-shrink: 0;
+.main2 .card .buttons button {
+  background-color: hsl(204, 100%, 16%);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
-.main .carousel__slides img {
-  width: 100%;
-  display: block;
+.main2 .card .buttons button:hover {
+  background-color: #00121f;
 }
-.main .carousel__navigation {
+.main2 .card .buttons .cart-btn {
+  background-color: hsl(241, 96%, 11%);
+}
+.main2 .card .buttons .cart-btn:hover {
+  background-color: #000005;
+}
+
+.main3 {
+  grid-area: main;
+  font-family: "Courier New", Courier, monospace;
+  background-color: black;
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
-  position: absolute;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
+  align-items: center;
 }
-.main .carousel__navigation label {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #fff;
-  margin: 0 5px;
+
+.main4 {
+  grid-area: main;
+  font-family: "Courier New", Courier, monospace;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main4 .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+.main4 .card {
+  background-color: hwb(0 100% 0%);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+.main4 .card:hover {
+  transform: scale(1.05);
+}
+.main4 .card img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.main4 .card h3 {
+  margin: 15px 0;
+}
+.main4 .card p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.main4 .card .buttons {
+  display: flex;
+  justify-content: space-around;
+}
+.main4 .card .buttons button {
+  background-color: hsl(204, 100%, 16%);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s;
 }
-.main .carousel__navigation label:hover {
-  background-color: #000;
+.main4 .card .buttons button:hover {
+  background-color: #00121f;
 }
-.main input[type=radio] {
-  display: none;
+.main4 .card .buttons .cart-btn {
+  background-color: hsl(241, 96%, 11%);
 }
-.main input[type=radio]:nth-of-type(1):checked ~ .carousel__slides {
-  transform: translateX(0);
+.main4 .card .buttons .cart-btn:hover {
+  background-color: #000005;
 }
-.main input[type=radio]:nth-of-type(2):checked ~ .carousel__slides {
-  transform: translateX(-33.333%);
+
+.main5 {
+  grid-area: main;
+  font-family: "Courier New", Courier, monospace;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.main input[type=radio]:nth-of-type(3):checked ~ .carousel__slides {
-  transform: translateX(-66.666%);
+.main5 .contacto {
+  background: radial-gradient(circle, #6d6868, hsl(240, 3%, 72%));
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgb(250, 250, 250);
 }
-.main input[type=radio]:nth-of-type(1):checked ~ .carousel__navigation label:nth-of-type(1), .main input[type=radio]:nth-of-type(2):checked ~ .carousel__navigation label:nth-of-type(2), .main input[type=radio]:nth-of-type(3):checked ~ .carousel__navigation label:nth-of-type(3) {
-  background-color: #000;
+.main5 .contacto h2 {
+  margin-bottom: 15px;
+  color: azure;
+}
+.main5 .contacto input,
+.main5 .contacto textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid hsl(0, 0%, 80%);
+  border-radius: 5px;
+  color: azure;
+  width: 100%;
+}
+.main5 .contacto button {
+  background-color: #000000;
+  color: hsl(0, 0%, 100%);
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+}
+.main5 .contacto button:hover {
+  background-color: #1842cc;
 }
 
 .footer {
-  background-color: rgb(5, 4, 4);
   grid-area: footer;
-  font-family: "Comfortaa", sans-serif;
-  background-image: url(../img/footer.jpg);
-}
-.footer .contactanos {
-  color: rgb(255, 255, 255);
-}
-.footer .contactanos h4 {
-  color: rgb(255, 255, 255);
+  background: linear-gradient(black, rgb(1, 1, 82), black);
+  font-family: "Courier New", Courier, monospace;
+  margin-top: auto;
+  text-align: center;
+  padding: 20px 0;
 }
 .footer .redes {
   text-align: center;
 }
-.footer .redes h4 {
+.footer .redes h2 {
   color: white;
 }
 .footer .redes img {
   border-radius: 20px;
+}
+.footer .redes img:hover {
+  transform: scale(1.1, 1.1);
 }
 .footer .texto {
   color: beige;
 }
 .footer .texto p {
   color: white;
-}
-
-/*media quaries*/
-@media only screen and (max-width: 600px) {
-  .body {
-    display: grid;
-    grid-template-rows: 0.2fr 0.2fr 4fr 0.4fr;
-    grid-template-columns: 1fr;
-    grid-template-areas: "header" "aside" "main" "footer";
-    background-color: black;
-  }
-  .destacados {
-    color: white;
-    background-color: black;
-  }
-  .texto {
-    display: none;
-  }
-}
-@media (max-width: 900px) {
-  .galeria-item {
-    flex: 1 1 calc(50% - 20px);
-  }
-}
-@media (max-width: 600px) {
-  .galeria-item {
-    flex: 1 1 100%;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */
