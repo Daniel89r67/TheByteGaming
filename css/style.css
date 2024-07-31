@@ -19,7 +19,7 @@
 
 .header {
   grid-area: header;
-  background: linear-gradient(hsl(209, 100%, 10%), rgb(1, 1, 82), black);
+  background: linear-gradient(#001020, #13131a, #747373);
 }
 .header h1 a {
   text-decoration: none;
@@ -50,24 +50,113 @@
 
 .main {
   grid-area: main;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.main h1 {
+  margin-bottom: 20px;
+  color: white;
   font-family: "Courier New", Courier, monospace;
+}
+.main .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+.main .gallery .card {
   background-color: black;
+  color: white;
+  border-radius: 1px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+  text-align: center;
+}
+.main .gallery .card:hover {
+  transform: scale(1.55);
+  border: 1px solid grey;
+  opacity: 70%;
+}
+.main .gallery .card img {
+  width: 100%;
+}
+.main .gallery .card .description {
+  padding: 10px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.main1 {
+  grid-area: main;
+  font-family: "Courier New", Courier, monospace;
+  background-color: #000000;
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-.main1 {
-  grid-area: main;
-  font-family: "Courier New", Courier, monospace;
+.main1 .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+.main1 .card {
   background-color: black;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 0;
   padding: 0;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+.main1 .card:hover {
+  transform: scale(1.05);
+  opacity: 50%;
+}
+.main1 .card img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.main1 .card h3 {
+  margin: 15px 0;
+  color: #fff;
+}
+.main1 .card p {
+  color: #ffffff;
+  font-size: 5px;
+  margin-bottom: 5px;
+}
+.main1 .card .buttons {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
+}
+.main1 .card .buttons button {
+  background-color: hsl(204, 100%, 16%);
+  color: #fff;
+  border: none;
+  padding: 2px 4px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.main1 .card .buttons button:hover {
+  background-color: #00121f;
+}
+.main1 .card .buttons .cart-btn {
+  background-color: hsl(241, 96%, 11%);
+}
+.main1 .card .buttons .cart-btn:hover {
+  background-color: #000005;
 }
 
 .main2 {
@@ -87,7 +176,7 @@
 }
 .main2 .card {
   background-color: hwb(0 100% 0%);
-  border-radius: 10px;
+  border-radius: 30px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 20px;
   padding: 20px;
@@ -100,8 +189,8 @@
 }
 .main2 .card img {
   width: 100%;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 }
 .main2 .card h3 {
   margin: 15px 0;
@@ -144,6 +233,36 @@
   justify-content: center;
   align-items: center;
 }
+.main3 .container {
+  display: flex;
+  gap: 20px;
+}
+.main3 .card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+}
+.main3 .card:hover {
+  transform: scale(1.05);
+  opacity: 50%;
+}
+.main3 .card img {
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+}
+.main3 .card h3 {
+  margin: 15px 0;
+  color: hsl(204, 81%, 14%);
+  transition: color 0.3s;
+}
+.main3 .card h3:hover {
+  color: #020c12;
+}
 
 .main4 {
   grid-area: main;
@@ -151,18 +270,19 @@
   background-color: black;
   margin: 0;
   padding: 0;
-  display: flex;
+  display: inline-block;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
 .main4 .container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
 }
 .main4 .card {
   background-color: hwb(0 100% 0%);
-  border-radius: 10px;
+  border-radius: 30px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 20px;
   padding: 20px;
@@ -175,16 +295,16 @@
 }
 .main4 .card img {
   width: 100%;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 }
 .main4 .card h3 {
   margin: 15px 0;
 }
 .main4 .card p {
   color: #666;
-  font-size: 14px;
-  margin-bottom: 20px;
+  font-size: 10px;
+  margin-bottom: 10px;
 }
 .main4 .card .buttons {
   display: flex;
@@ -194,7 +314,7 @@
   background-color: hsl(204, 100%, 16%);
   color: #fff;
   border: none;
-  padding: 10px 15px;
+  padding: 2px 6px;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
