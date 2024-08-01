@@ -1,0 +1,52 @@
+.footer {
+    grid-area: footer;
+    background: linear-gradient(black, rgb(1, 1, 82), black);
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: auto;
+    text-align: center;
+    padding: 20px 0;
+
+
+    .redes {
+        text-align: center;
+
+        h2 {
+            color: white;
+            animation-duration: 3s;
+            animation-name: redes;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes redes {
+            0% {
+                opacity: 0.5;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        img {
+            border-radius: 20px;
+
+            &:hover {
+                transform: scale(1.1, 1.1);
+            }
+        }
+    }
+
+
+    .texto {
+        color: beige;
+
+        p {
+            color: white;
+        }
+
+    }
+}

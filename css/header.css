@@ -1,3 +1,38 @@
-
+.header {
+  grid-area: header;
+  background: linear-gradient(#001020, #13131a, #747373);
+}
+.header h1 a {
+  text-decoration: none;
+  color: hwb(0 100% 0%);
+}
+.header h1 a:hover {
+  transform: scale(1.32);
+  font-size: 85%;
+  opacity: 40%;
+}
+.header nav {
+  background: linear-gradient(rgb(22, 19, 19), hsl(0, 2%, 25%), #1b1b1b);
+}
+.header nav a img {
+  width: 75px;
+  transition: all 1.5s;
+  border-radius: 25px;
+}
+.header nav a img:hover {
+  transform: scale(1.3s);
+  transform: rotate(0.9turn);
+  border: 1px solid grey;
+}
+.header nav .nav-item {
+  font-size: large;
+  font-family: "Courier New", Courier, monospace;
+}
+.header nav .nav-item:hover {
+  border-radius: 10px;
+  background-color: rgb(38, 94, 197);
+  text-decoration: white;
+  transform: scale(1.1, 1.1);
+}
 
 /*# sourceMappingURL=header.css.map */

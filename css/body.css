@@ -1,0 +1,20 @@
+@charset "UTF-8";
+/*Reseteo del código para unificar los espacios en todos los navegadores*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.contenedor {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 0.4fr 1.6fr 1fr;
+  grid-template-rows: 0.4fr 2.8fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "header header header" "main main main" "footer footer footer";
+}
+
+/*# sourceMappingURL=body.css.map */
