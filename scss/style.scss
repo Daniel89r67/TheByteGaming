@@ -46,6 +46,13 @@ $transition-duration1: 0.5s;
         a {
             text-decoration: none;
             color: hwb(0 100% 0%);
+            &:hover {
+                transform: scale(1.32);
+                font-size: 85%;
+                opacity: 40%;
+                
+                
+            }
         }
     }
 
@@ -61,6 +68,8 @@ $transition-duration1: 0.5s;
                 &:hover {
                     transform: scale(1.3s);
                     transform: rotate(0.9turn);
+                    border: 1px solid grey;
+
                 }
             }
         }
@@ -89,6 +98,7 @@ $transition-duration1: 0.5s;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding: 2px;
 
 
@@ -100,11 +110,11 @@ $transition-duration1: 0.5s;
 
     .galeria {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 20px;
-        width: 100%;
-        max-width: 1200px;
         flex-wrap: wrap;
+        width: 100%;
+              
 
         .card {
             background-color: black;
@@ -116,7 +126,7 @@ $transition-duration1: 0.5s;
             text-align: center;
 
             &:hover {
-                transform: scale(1.55);
+                transform: scale(1.32);
                 border: 1px solid grey;
                 opacity: 70%;
 
@@ -477,6 +487,20 @@ $transition-duration1: 0.5s;
 
         h2 {
             color: white;
+            animation-duration: 3s;
+            animation-name: redes;
+            animation-iteration-count: infinite;
+        }
+        @keyframes redes {
+            0%{
+                opacity: 0.5;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
         }
 
         img {
@@ -501,6 +525,7 @@ $transition-duration1: 0.5s;
 
 @media screen and (max-width: 1620px) {
     .contenedor {
+        
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto;
@@ -515,6 +540,7 @@ $transition-duration1: 0.5s;
 
 @media screen and (max-width: 1024px) {
     .contenedor {
+         
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto;
@@ -529,6 +555,7 @@ $transition-duration1: 0.5s;
 
 @media screen and (max-width: 768px) {
     .contenedor {
+        
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto;
@@ -543,6 +570,7 @@ $transition-duration1: 0.5s;
 
 @media screen and (max-width: 480px) {
     .contenedor {
+        
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto;
