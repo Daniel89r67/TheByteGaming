@@ -237,41 +237,43 @@
 .main3 {
   grid-area: main;
   font-family: "Courier New", Courier, monospace;
-  background-color: black;
+  background-color: #000000;
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
 .main3 .container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
+  flex-wrap: wrap;
+  width: 100vw;
 }
 .main3 .card {
-  background-color: #050505;
-  border-radius: 30px;
+  background-color: black;
+  border-radius: 1px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 10px;
-  padding: 10px;
-  width: 250px;
+  overflow: hidden;
+  transition: transform 0.3s;
   text-align: center;
-  transition: transform 0.2s;
-  display: flex;
-  flex-wrap: wrap;
 }
 .main3 .card:hover {
-  transform: scale(1.05);
-  opacity: 50%;
+  transform: scale(0.5);
+  border: 1px solid rgb(0, 0, 0);
+  opacity: 20%;
 }
 .main3 .card img {
   width: 100%;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid hsl(0, 0%, 0%);
+  border-radius: 10px;
 }
 .main3 .card h3 {
-  margin: 15px 0;
+  margin-bottom: 20px;
   color: white;
-  transition: color 0.3s;
+  font-family: "Courier New", Courier, monospace;
 }
 .main3 .card h3:hover {
   color: #020c12;
