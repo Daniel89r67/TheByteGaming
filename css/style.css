@@ -12,9 +12,9 @@
   height: 100vh;
   grid-auto-columns: 1fr;
   grid-template-columns: 0.4fr 1.6fr 1fr;
-  grid-template-rows: 0.4fr 0.4fr 2.8fr 1fr;
+  grid-template-rows: 0.4fr 2.8fr 1fr;
   gap: 0px 0px;
-  grid-template-areas: "header header header" "main main main" "main main main" "footer footer footer";
+  grid-template-areas: "header header header" "main main main" "footer footer footer";
 }
 
 .header {
@@ -57,21 +57,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 2px;
 }
 .main h1 {
   margin-bottom: 20px;
   color: white;
   font-family: "Courier New", Courier, monospace;
 }
-.main .gallery {
+.main .galeria {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
   width: 100%;
   max-width: 1200px;
+  flex-wrap: wrap;
 }
-.main .gallery .card {
+.main .galeria .card {
   background-color: black;
   color: white;
   border-radius: 1px;
@@ -80,15 +81,15 @@
   transition: transform 0.3s;
   text-align: center;
 }
-.main .gallery .card:hover {
+.main .galeria .card:hover {
   transform: scale(1.55);
   border: 1px solid grey;
   opacity: 70%;
 }
-.main .gallery .card img {
+.main .galeria .card img {
   width: 100%;
 }
-.main .gallery .card .description {
+.main .galeria .card .description {
   padding: 10px;
   font-family: "Courier New", Courier, monospace;
 }
@@ -394,6 +395,39 @@
 }
 .footer .texto p {
   color: white;
+}
+
+@media screen and (max-width: 1620px) {
+  .contenedor {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "header" "main" "footer";
+  }
+}
+@media screen and (max-width: 1024px) {
+  .contenedor {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "header" "main" "footer";
+  }
+}
+@media screen and (max-width: 768px) {
+  .contenedor {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "header" "main" "footer";
+  }
+}
+@media screen and (max-width: 480px) {
+  .contenedor {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "header" "main" "footer";
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
